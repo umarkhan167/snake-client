@@ -4,7 +4,7 @@ const net = require("net");
 const connect = function () {
   const conn = net.createConnection({
     host: '172.18.4.1',
-    port: 50541
+    port: 50541,
   });
 
   //.on method event handler makes sure the function is connected to the server
