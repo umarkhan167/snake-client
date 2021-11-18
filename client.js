@@ -14,15 +14,10 @@ const connect = function () {
     conn.write("Name: MUK")
   });
 
-
-
   // interpret incoming data as text
   conn.setEncoding("utf8");
   return conn;
 };
-
-console.log("Connecting ...");
-connect();
 
 
 
