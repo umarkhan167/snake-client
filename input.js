@@ -33,6 +33,8 @@ const handleUserInput = function (key) {
     } else if (key === 'd') {
     console.log("Move: right");
     connection.write("Move: right");
+    } else if (key === "m") {
+      connection.write("Say: Im gonna win!")
     }
 };  
 
