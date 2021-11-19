@@ -3,7 +3,7 @@ const { MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY } = require(".
 
 let connection;
 
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -18,8 +18,7 @@ const setupInput = function (conn) {
 };
 
 
-const handleUserInput = function (key) {
-  // console.log(key);
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   } if (key === 'w') {
@@ -28,16 +27,16 @@ const handleUserInput = function (key) {
   } else if (key === 'a') {
     console.log("Move: left");
     connection.write(MOVE_LEFT_KEY);
-   } else if (key === 's') {
+  } else if (key === 's') {
     console.log("Move: down");
     connection.write(MOVE_DOWN_KEY);
-    } else if (key === 'd') {
+  } else if (key === 'd') {
     console.log("Move: right");
     connection.write(MOVE_RIGHT_KEY);
-    } else if (key === "m") {
-      connection.write("Say: Im gonna win!")
-    }
-};  
+  } else if (key === "m") {
+    connection.write("Say: Im gonna win!");
+  }
+};
 
 
 module.exports = { setupInput };

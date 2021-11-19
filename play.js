@@ -1,4 +1,3 @@
-const { stdin } = require("process");
 const clientConnect = require("./client");
 
 clientConnect;
